@@ -1,0 +1,9 @@
+.custom-dialog-title {
+    display: flex;
+    background-image: url('your-image-url.jpg'); /* Add your image URL here */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    width: 100%;
+    height: 400px; /* Adjust this value to change the height */
+    color: white; /* Text color for contrast */
+}

@@ -1,0 +1,141 @@
+/* Page Header Styling */
+.page-header {
+    background-color: #343a40;
+    /* background-image: url('../../images/blog-header-bg.jpg');  */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 100px 0;
+}
+
+.page-header h1 {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/* Search Bar Styling */
+.search-bar {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 2px solid #ddd;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 30px auto;
+}
+
+.search-bar:focus {
+    outline: none;
+    border-color: #bd0505;
+}
+
+/* Blog Entry Styling */
+.blog-entry {
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-entry:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.blog-entry .img-link {
+    display: block;
+}
+
+.blog-entry .img-link img {
+    width: 100%; /* Ensures the image takes up the full width of its container */
+    height: 200px; /* Set a fixed height for all blog images */
+    object-fit: cover; /* Ensures the image maintains its aspect ratio and doesn't stretch */
+    border-radius: 8px 8px 0 0; /* Top corners rounded */
+    transition: transform 0.3s ease; /* Adds a zoom effect on hover */
+}
+
+.blog-entry:hover .img-link img {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.blog-entry .card-body {
+    padding: 20px;
+}
+
+.blog-entry .date {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.blog-entry .category-link {
+    color: #bd0505;
+    text-decoration: none;
+}
+
+.blog-entry .category-link:hover {
+    text-decoration: underline;
+}
+
+.blog-entry .blog-title {
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.blog-entry .blog-title:hover {
+    color: #bd0505;
+}
+
+.blog-entry .card-text {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.blog-entry .btn-primary {
+    background-color: #bd0505;
+    border-color: #dd3131;
+}
+
+.blog-entry .btn-primary:hover {
+    background-color: #bd0505;
+    border-color: #e23c3c;
+}
+
+/* Grid Layout for Blog Entries */
+@media (min-width: 768px) {
+    .blog-entry {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .blog-entry .img-link {
+        flex-basis: 40%; /* Image takes up 40% of the space */
+    }
+
+    .blog-entry .card-body {
+        flex-basis: 60%; /* Text content takes up 60% of the space */
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 767px) {
+    .blog-entry {
+        flex-direction: column; /* Stack vertically on smaller screens */
+    }
+
+    .blog-entry .img-link img {
+        border-radius: 8px; /* Rounded corners for the entire image */
+    }
+
+    .search-bar {
+        max-width: 100%; /* Make search bar full width on mobile */
+    }
+}

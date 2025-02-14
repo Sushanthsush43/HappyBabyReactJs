@@ -1,0 +1,35 @@
+/* Global transparent scrollbar styles */
+
+/* For WebKit browsers */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+    height: 12px; /* Height of the scrollbar (for horizontal) */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; /* Make the track transparent */
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(165, 165, 165, 0.5); /* Semi-transparent color for the thumb */
+    border-radius: 6px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(136, 136, 136, 0.8); /* Change thumb color on hover */
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin; /* Options: auto, thin, none */
+    scrollbar-color: rgba(204, 204, 204, 0.5) transparent; /* Semi-transparent thumb and transparent track */
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

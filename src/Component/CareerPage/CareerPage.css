@@ -1,0 +1,102 @@
+/* Container Styles */
+.container-fluid {
+    background-color: #2c3e50; /* Dark background for header */
+}
+
+.page-header {
+    position: relative;
+    overflow: hidden;
+}
+
+.text-center {
+    color: #ffffff; /* White text for header */
+}
+
+/* Content Styles */
+.brochure-content {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section {
+    margin: 20px 0;
+}
+
+.content-title h6 {
+    font-size: 1.2rem;
+    color: #bd0505; /* Green color for titles */
+}
+
+.content-title h2 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+.brochure-section {
+    padding: 40px 0;
+}
+
+/* Job Listings Styles */
+.job-listings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Job Card Styles */
+.job-card {
+    background-color: #ffffff; /* White background for job cards */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px; /* Fixed width for job cards */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s;
+}
+
+.job-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.job-card .icon {
+    font-size: 2rem;
+    color: #bd0505; /* Green color for icons */
+    margin-bottom: 10px;
+}
+
+.job-card h6 {
+    font-size: 1.5rem;
+    color: #333; /* Darker color for job titles */
+}
+
+.job-card p {
+    color: #666; /* Gray color for job descriptions */
+}
+
+/* Apply Button Styles */
+.apply-button {
+    background-color: #bd0505; /* Green button */
+    color: white; /* White text for button */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.apply-button:hover {
+    background-color: #db2121; /* Darker green on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .job-listings {
+        flex-direction: column; /* Stack job cards on small screens */
+        align-items: center; /* Center items */
+    }
+
+    .job-card {
+        width: 100%; /* Full width on mobile */
+    }
+}

@@ -1,0 +1,99 @@
+.brochure {
+    font-family: 'Arial', sans-serif;
+}
+
+/* .page-header {
+    background: #bd0505;
+    color: #fff;
+} */
+
+.brochure-content, .brochure-section {
+    /* max-width: 900px; */
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.content-title h6 {
+    color: #bd0505;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.content-title h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.feature-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    text-align: left;
+}
+
+.feature-card .icon {
+    color: #bd0505;
+    font-size: 2rem;
+    margin-right: 10px;
+}
+    
+.brochure-content {
+    padding: 20px;
+}
+
+.section {
+    margin-top: 20px;
+}
+
+.contact-us {
+    padding: 20px;
+    border: 1px solid #ccc; /* Optional border for the contact form */
+    border-radius: 8px; /* Optional rounded corners */
+    background-color: #f9f9f9; /* Optional background color */
+}
+
+.feature-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.feature-card .icon {
+    font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+    .feature-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature-card .icon {
+        margin-bottom: 0.5rem;
+    }
+}
+/* Default styles */
+.form-label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Additional mobile styles */
+@media (max-width: 768px) {
+    .form-label {
+        text-align: left;
+    }
+}
