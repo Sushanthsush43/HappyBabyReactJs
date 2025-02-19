@@ -113,6 +113,15 @@ const NavbarComponent = ({ activeLink, setActiveLink }) => {
               Cart
             </Link>
             <Link
+              to="/DemoProductPage"
+              className={`nav-item nav-link ${
+                activeLink === "DemoProductPage" ? "active" : ""
+              }`}
+              onClick={() => handleLinkClick("DemoProductPage")}
+            >
+              Demo
+            </Link>
+            <Link
               to="/About_Us"
               className={`nav-item nav-link ${
                 activeLink === "About_Us" ? "active" : ""

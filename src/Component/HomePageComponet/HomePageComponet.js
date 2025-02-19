@@ -428,7 +428,7 @@ const HomePageComponet = ({ addToCart }) => {
                   <div className="px-6 py-4 bg-white flex flex-col flex-grow">
                     <a
                       href="#!"
-                      className="font-semibold text-lg inline-block hover:text-indigo-600 transition"
+                      className="font-semibold text-lg text-black no-underline hover:text-indigo-600 transition"
                     >
                       {product.name}
                     </a>
