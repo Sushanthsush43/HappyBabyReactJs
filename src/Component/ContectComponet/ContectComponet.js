@@ -31,7 +31,7 @@ const ContectComponet = () => {
                                 <div className="col-md-4">
                                     <h5 className="section-title ff-secondary fw-normal text-start text-primary">Address</h5>
                                     <p className="text-dark"><i className="fa fa-map-marker-alt text-primary me-2 "></i>
-                                        Sezavu Sustainable Private Limited, Bangalore, India</p>
+                                        XXXXXXXXXXXXXXXXXXXXXXXXX, XXXXXXX, India</p>
                                 </div>
                                 <div className="col-md-4">
                                     <h5 className="section-title ff-secondary fw-normal text-start text-primary">Contact</h5>
@@ -45,7 +45,7 @@ const ContectComponet = () => {
                         </div>
                         <div className="col-md-6 wow fadeIn" data-wow-delay="0.1s">
                             <iframe className="position-relative rounded w-100 h-100"
-                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d248849.84916296526!2d77.6309395!3d12.9539974!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6551f9b80e32d52d%3A0xf7c7977c3c9c36d9!2sSezavu%20Sustainable%20Pvt.%20Ltd!5e0!3m2!1sen!2sin!4v1728057812315!5m2!1sen!2sin"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.143031436195!2d77.6309395!3d12.9539974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15f5e6e1b2f5%3A0x9e7c2b6d5f6b5f1a!2sSezavu%20Sustainable%20Pvt.%20Ltd!5e0!3m2!1sen!2sin!4v1728057812315!5m2!1sen!2sin"
                                 frameBorder="0" style={{ minHeight: "350px", border: "0" }} allowFullScreen="" aria-hidden="false" tabIndex="0"></iframe>
 
                         </div>

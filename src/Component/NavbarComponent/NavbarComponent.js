@@ -74,8 +74,6 @@ const NavbarComponent = ({ activeLink, setActiveLink }) => {
 
   return (
     <>
-      {/* {
-                !isHomePage ? ( */}
       <nav className="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
         <Link to="/" className="navbar-brand d-flex align-items-center">
           <h1 className="m-0">
@@ -83,6 +81,19 @@ const NavbarComponent = ({ activeLink, setActiveLink }) => {
             <img src="img/logo.png" width="200" alt="Logo" />
           </h1>
         </Link>
+        <div className="mx-auto d-flex align-items-center w-75">
+    <div className="input-group rounded bg-light px-13 py-2 w-100">
+      <span className="input-group-text border-0 bg-light">
+        <i className="fas fa-search text-muted"></i>
+      </span>
+      <input
+  type="text"
+  className="form-control border-0 bg-light"
+  placeholder="Search for products, brands and more"
+  style={{ outline: "none", boxShadow: "none", borderColor: "transparent" }}
+/>
+    </div>
+  </div>
         <button
           type="button"
           className="navbar-toggler"
@@ -102,16 +113,6 @@ const NavbarComponent = ({ activeLink, setActiveLink }) => {
             >
               Home
             </Link>
-
-            <Link
-              to="/CartPage"
-              className={`nav-item nav-link ${
-                activeLink === "CartPage" ? "active" : ""
-              }`}
-              onClick={() => handleLinkClick("CartPage")}
-            >
-              Cart
-            </Link>
             <Link
               to="/DemoProductPage"
               className={`nav-item nav-link ${
@@ -122,6 +123,16 @@ const NavbarComponent = ({ activeLink, setActiveLink }) => {
               Demo
             </Link>
             <Link
+  to="/CartPage"
+  className={`nav-item nav-link d-flex align-items-center ${activeLink === "CartPage" ? "active" : ""}`}
+  onClick={() => handleLinkClick("CartPage")}
+>
+  <i className="fas fa-shopping-cart me-2"></i> 
+  <span>Cart</span>
+</Link>
+
+
+            {/* <Link
               to="/About_Us"
               className={`nav-item nav-link ${
                 activeLink === "About_Us" ? "active" : ""
@@ -129,7 +140,7 @@ const NavbarComponent = ({ activeLink, setActiveLink }) => {
               onClick={() => handleLinkClick("About_Us")}
             >
               About Us
-            </Link>
+            </Link> */}
             {/* <div className="nav-item dropdown"> */}
             {/* <a
                                 href="#"
@@ -217,7 +228,7 @@ const NavbarComponent = ({ activeLink, setActiveLink }) => {
                             Career
                         </Link> */}
 
-            <Link
+            {/* <Link
               to="/Contact"
               className={`nav-item nav-link ${
                 activeLink === "Contact" ? "active" : ""
@@ -225,7 +236,7 @@ const NavbarComponent = ({ activeLink, setActiveLink }) => {
               onClick={() => handleLinkClick("Contact")}
             >
               Contact Us
-            </Link>
+            </Link> */}
           </div>
         </div>
       </nav>
