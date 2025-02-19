@@ -82,18 +82,22 @@ const NavbarComponent = ({ activeLink, setActiveLink }) => {
           </h1>
         </Link>
         <div className="mx-auto d-flex align-items-center w-75">
-    <div className="input-group rounded bg-light px-13 py-2 w-100">
-      <span className="input-group-text border-0 bg-light">
-        <i className="fas fa-search text-muted"></i>
-      </span>
-      <input
-  type="text"
-  className="form-control border-0 bg-light"
-  placeholder="Search for products, brands and more"
-  style={{ outline: "none", boxShadow: "none", borderColor: "transparent" }}
-/>
-    </div>
-  </div>
+          <div className="input-group rounded bg-light px-13 py-2 w-100">
+            <span className="input-group-text border-0 bg-light">
+              <i className="fas fa-search text-muted"></i>
+            </span>
+            <input
+              type="text"
+              className="form-control border-0 bg-light"
+              placeholder="Search for products, brands and more"
+              style={{
+                outline: "none",
+                boxShadow: "none",
+                borderColor: "transparent",
+              }}
+            />
+          </div>
+        </div>
         <button
           type="button"
           className="navbar-toggler"
@@ -123,14 +127,15 @@ const NavbarComponent = ({ activeLink, setActiveLink }) => {
               Demo
             </Link>
             <Link
-  to="/CartPage"
-  className={`nav-item nav-link d-flex align-items-center ${activeLink === "CartPage" ? "active" : ""}`}
-  onClick={() => handleLinkClick("CartPage")}
->
-  <i className="fas fa-shopping-cart me-2"></i> 
-  <span>Cart</span>
-</Link>
-
+              to="/CartPage"
+              className={`nav-item nav-link d-flex align-items-center ${
+                activeLink === "CartPage" ? "active" : ""
+              }`}
+              onClick={() => handleLinkClick("CartPage")}
+            >
+              <i className="fas fa-shopping-cart me-2 fs-4"></i>
+              <span>Cart</span>
+            </Link>
 
             {/* <Link
               to="/About_Us"

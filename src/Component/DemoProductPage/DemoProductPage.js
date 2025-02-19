@@ -69,7 +69,7 @@ const DemoProductPage = () => {
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="form-control-sm me-2"
-              style={{ width: "400px",  height: "45px"}}
+              style={{ width: "400px", height: "45px" }}
             />
           </Form>
         </Col>

@@ -258,40 +258,40 @@ const HomePageComponet = ({ addToCart }) => {
     <div>
       {/* carousel Images */}
       <div
-  className="container-fluid p-0 mb-5 wow fadeIn"
-  data-wow-delay="0.1s"
-  style={{ height: "60vh" }}
->
-  <div
-    id="header-carousel"
-    className="carousel slide"
-    data-bs-ride="carousel"
-    style={{ height: "100%" }}
-  >
-    <div className="carousel-inner" style={{ height: "100%" }}>
-      {/* Slide 1 */}
-      <div className="carousel-item active" style={{ height: "100%" }}>
-        <img
-          className="w-100 h-100"
-          src="img/slider/hero1.png"
-          alt="Image"
-          style={{ objectFit: "cover" }}
-        />
-      </div>
+        className="container-fluid p-0 mb-5 wow fadeIn"
+        data-wow-delay="0.1s"
+        style={{ height: "60vh" }}
+      >
+        <div
+          id="header-carousel"
+          className="carousel slide"
+          data-bs-ride="carousel"
+          style={{ height: "100%" }}
+        >
+          <div className="carousel-inner" style={{ height: "100%" }}>
+            {/* Slide 1 */}
+            <div className="carousel-item active" style={{ height: "100%" }}>
+              <img
+                className="w-100 h-100"
+                src="img/slider/hero1.png"
+                alt="Image"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
 
-      {/* Slide 2 */}
-      <div className="carousel-item" style={{ height: "100%" }}>
-        <img
-          className="w-100 h-100"
-          src="img/slider/hero2.png"
-          alt="Image"
-          style={{ objectFit: "cover" }}
-        />
-      </div>
-    </div>
+            {/* Slide 2 */}
+            <div className="carousel-item" style={{ height: "100%" }}>
+              <img
+                className="w-100 h-100"
+                src="img/slider/hero2.png"
+                alt="Image"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+          </div>
 
-    {/* Carousel Controls (Fixed) */}
-    {/* <button
+          {/* Carousel Controls (Fixed) */}
+          {/* <button
       className="carousel-control-prev"
       type="button"
       data-bs-target="#header-carousel"
@@ -309,8 +309,8 @@ const HomePageComponet = ({ addToCart }) => {
       <span className="carousel-control-next-icon" aria-hidden="true"></span>
       <span className="visually-hidden">Next</span>
     </button> */}
-  </div>
-</div>
+        </div>
+      </div>
 
       {/* </div> */}
 
