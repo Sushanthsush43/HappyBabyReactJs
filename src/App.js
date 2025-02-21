@@ -21,7 +21,8 @@ import CareerPage from "./Component/CareerPage/CareerPage";
 import PrivacyPolicy from "./Component/PrivacyComponet/PrivacyPolicy";
 import TermsConditions from "./Component/TermsConditionsComponet/TermsConditions";
 import CartPage from "./Component/CartComponent/CartComponent";
-import DemoProductPage from "./Component/DemoProductPage/DemoProductPage"
+import DemoProductPage from "./Component/DemoProductPage/DemoProductPage";
+import SliderBarFilter from "./Component/SliderBarFilterHomePage/SliderBarFilterHomePage";
 import "./App.css";
 
 function ProtectedRoutes() {
@@ -51,7 +52,8 @@ function App() {
               element={<HomePageComponet addToCart={addToCart} />}
             />
             <Route path="About_Us" element={<AboutComponet />} />
-            <Route path="DemoProductPage" element={<DemoProductPage/>}/>
+            <Route path="SliderBarFilter" element={<SliderBarFilter />} />
+            <Route path="DemoProductPage" element={<DemoProductPage />} />
             <Route
               path="CartPage"
               element={
@@ -61,10 +63,10 @@ function App() {
                 />
               }
             />
-             <Route path="Contact" element={<ContectComponet />} />
-             
-             {/* ---------------------------------------------------------------------------------------- */}
-            
+            <Route path="Contact" element={<ContectComponet />} />
+
+            {/* ---------------------------------------------------------------------------------------- */}
+
             <Route
               path="InteractiveSustainability"
               element={<InteractiveSustainability />}
@@ -75,7 +77,7 @@ function App() {
               path="BlogComponaetDynamic"
               element={<BlogComponaetDynamic />}
             />
-           
+
             <Route
               path="Services_Be_Extraordinaire"
               element={<BeExtraordinaire />}
@@ -86,7 +88,6 @@ function App() {
             <Route path="Career_Page" element={<CareerPage />} />
             <Route path="Privacy_Policy" element={<PrivacyPolicy />} />
             <Route path="Terms&Conditions" element={<TermsConditions />} />
-           
           </Route>
         </Route>
       </Routes>

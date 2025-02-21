@@ -7,8 +7,9 @@ import WOW from "wow.js";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import SliderBarFilter from "../SliderBarFilterHomePage/SliderBarFilterHomePage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faYoutube, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 const HomePageComponet = ({ addToCart }) => {
   const navigate = useNavigate();
@@ -97,47 +98,62 @@ const HomePageComponet = ({ addToCart }) => {
     cssEase: "linear",
   };
 
+  // State to track favorite status for each product
+  const [favorites, setFavorites] = useState({}); // State to track favorites
+
+  // Function to toggle favorite status
+  const toggleFavorite = (productId) => {
+    setFavorites((prevFavorites) => ({
+      ...prevFavorites,
+      [productId]: !prevFavorites[productId], // Toggle favorite status
+    }));
+  };
+
   //Service card Images
   const services = [
     {
-      description: "Sanosan Shampo",
+      title: "Sanosan Shampoo",
+      description: "A gentle shampoo for babies.",
       image: "img/Sanosanshampo.webp",
       navigateTo: "/Services_Be_Extraordinaire",
     },
     {
-      description: "Baby Pilow",
+      title: "Baby Pillow",
+      description: "Soft and comfortable baby pillow.",
       image: "img/babypilow.jpeg",
       navigateTo: "/Services_Terraclan",
     },
     {
-      description: "Ecomama",
+      title: "Ecomama",
+      description: "Eco-friendly baby products.",
       image: "img/ecomama.webp",
       navigateTo: "/Services_Beearth",
     },
     {
-      description: "Baby Dress",
+      title: "Baby Dress",
+      description: "Stylish and comfy baby dresses.",
       image: "img/babydress.jpg",
       navigateTo: "/Satvik_hangout",
     },
     {
-      description: "Sbmayur Oil",
+      title: "Sbmayur Oil",
+      description: "Ayurvedic baby massage oil.",
       image: "img/sbmayuroil.webp",
       navigateTo: "/Satvik_hangout",
     },
     {
-      title: "Service 6",
-      description: "DasaPUshadi",
+      title: "Dasa Pushadi",
+      description: "Herbal oil for baby care.",
       image: "img/Mother-Child.webp",
       navigateTo: "/Satvik_hangout",
     },
     {
-      title: "Service 7",
-      description: "Sbmayur Oil",
+      title: "Sbmayur Oil",
+      description: "Natural baby massage oil.",
       image: "img/sbmayuroil.webp",
       navigateTo: "/Satvik_hangout",
     },
   ];
-
   //Product Images,price,name
   const products = [
     {
@@ -145,112 +161,112 @@ const HomePageComponet = ({ addToCart }) => {
       image: "img/sbmayuroil.webp",
       name: "Submayur Oil",
       price: "₹19.99",
-      description: "Helps protect against infections with Vitamin C",
+      description: "Helps protect infections",
     },
     {
       id: 2,
       image: "img/jar.jpg",
       name: "Jar Mockup",
       price: "₹214.99",
-      description: "Vitamin D & Calcium for healthy development",
+      description: "Vitamin D & Calcium",
     },
     {
       id: 3,
       image: "img/ecomama.webp",
       name: "Ecomama",
       price: "₹129.99",
-      description: "No artificial colors, preservatives, or allergens",
+      description: "No artificial colors, preservatives",
     },
     {
       id: 4,
       image: "img/Sanosanshampo.webp",
-      name: "Samosans Shampo",
+      name: "Sanosan Shampoo",
       price: "₹34.99",
-      description: "DHA & Vitamin B-complex for cognitive growth",
+      description: "DHA & Vitamin B-complex",
     },
     {
       id: 5,
       image: "img/Mother-Child.webp",
       name: "BaByShine",
       price: "₹156.99",
-      description: "Helps protect against infections with Vitamin C",
+      description: "Helps protect infections",
     },
     {
       id: 6,
       image: "img/jar1.jpg",
       name: "Baby Mockup",
       price: "₹204.99",
-      description: "Vitamin D & Calcium for healthy development",
+      description: "Vitamin D & Calcium",
     },
     {
       id: 7,
       image: "img/babyfood.jpg",
       name: "Spout Pouch",
       price: "₹292.99",
-      description: "No artificial colors, preservatives, or allergens",
+      description: "No artificial colors, preservatives",
     },
     {
       id: 8,
       image: "img/mas pharmacy.jpg",
       name: "Cough Syrup",
       price: "₹34.99",
-      description: "DHA & Vitamin B-complex for cognitive growth",
+      description: "DHA & Vitamin B-complex",
     },
     {
       id: 9,
       image: "img/jhonsonbaby.jpg",
-      name: "Jhonson Baby",
+      name: "Johnson Baby",
       price: "₹139.99",
-      description: "Helps protect against infections with Vitamin C",
+      description: "Helps protect infections",
     },
     {
       id: 10,
       image: "img/cetaphil.webp",
       name: "Cetaphil",
       price: "₹234.99",
-      description: "Vitamin D & Calcium for healthy development",
+      description: "Vitamin D & Calcium ",
     },
     {
       id: 11,
       image: "img/joil.jpg",
-      name: "Jhonson Oil",
+      name: "Johnson Oil",
       price: "₹29.99",
-      description: "No artificial colors, preservatives, or allergens",
+      description: "No artificial colors, preservatives",
     },
     {
       id: 12,
       image: "img/pampers.jpg",
       name: "Pampers",
       price: "₹234.99",
-      description: "DHA & Vitamin B-complex for cognitive growth",
+      description: "DHA & Vitamin B-complex",
     },
     {
       id: 13,
       image: "img/cerelac.jpg",
       name: "Cerelac Mix",
       price: "₹69.99",
-      description: "Helps protect against infections with Vitamin C",
+      description: "Helps protect with Vitamin C",
     },
     {
       id: 14,
       image: "img/diaperrunsh.webp",
-      name: "Diaoper Rush",
+      name: "Diaper Rash Cream",
       price: "₹94.99",
-      description: "Vitamin D & Calcium for healthy development",
+      description: "Vitamin D & Calcium",
     },
     {
       id: 15,
       image: "img/manna.webp",
-      name: "Mana Health Mix",
+      name: "Manna Health Mix",
       price: "₹39.99",
-      description: "No artificial colors, preservatives, or allergens",
+      description: "No artificial colors, preservatives",
     },
     {
       id: 16,
       image: "img/gerber.jpg",
       name: "Gerber",
       price: "₹34.99",
-      description: "DHA & Vitamin B-complex for cognitive growth",
+      description: "DHA & Vitamin B-complex",
     },
   ];
 
@@ -260,12 +276,13 @@ const HomePageComponet = ({ addToCart }) => {
       <div
         className="container-fluid p-0 mb-5 wow fadeIn"
         data-wow-delay="0.1s"
-        style={{ height: "60vh" }}
+        style={{ height: "50vh" }}
       >
         <div
           id="header-carousel"
           className="carousel slide"
           data-bs-ride="carousel"
+          data-bs-interval="3000"
           style={{ height: "100%" }}
         >
           <div className="carousel-inner" style={{ height: "100%" }}>
@@ -290,25 +307,31 @@ const HomePageComponet = ({ addToCart }) => {
             </div>
           </div>
 
-          {/* Carousel Controls (Fixed) */}
-          {/* <button
-      className="carousel-control-prev"
-      type="button"
-      data-bs-target="#header-carousel"
-      data-bs-slide="prev"
-    >
-      <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span className="visually-hidden">Previous</span>
-    </button>
-    <button
-      className="carousel-control-next"
-      type="button"
-      data-bs-target="#header-carousel"
-      data-bs-slide="next"
-    >
-      <span className="carousel-control-next-icon" aria-hidden="true"></span>
-      <span className="visually-hidden">Next</span>
-    </button> */}
+          {/* Carousel Controls */}
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#header-carousel"
+            data-bs-slide="prev"
+          >
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#header-carousel"
+            data-bs-slide="next"
+          >
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
 
@@ -369,56 +392,79 @@ const HomePageComponet = ({ addToCart }) => {
         </div>
       </div>
 
-      {/* Product Cart */}
-      <link rel="stylesheet" href="news/tailwind.min.css" />
-      <link rel="stylesheet" href="news/style.css" />
-      <div style={{ background: "#e0e5e0" }}>
-        <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
-          <div className="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
-            <div className="border-start border-5 border-primary ps-4">
-              <h6 className="text-body text-uppercase mb-2">
-                Featured products
-              </h6>
-              <h1 className="display-6 mb-0">Baby &amp; Care</h1>
+      {/* Main Content with Sidebar and Product List */}
+      <div className="flex">
+        {/* Sidebar Filter */}
+        <SliderBarFilter />
+        {/* Product Cart */}
+        <link rel="stylesheet" href="news/tailwind.min.css" />
+        <link rel="stylesheet" href="news/style.css" />
+        <div style={{ background: "#e0e5e0" }}>
+          <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
+            <div className="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
+              <div className="border-start border-5 border-primary ps-4">
+                <h6 className="text-body text-uppercase mb-2">
+                  Featured products
+                </h6>
+                <h1 className="display-6 mb-0">Baby &amp; Care</h1>
+              </div>
             </div>
-          </div>
-          <div className="mt-5">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
-              {products.map((product) => (
-                <div
-                  key={product.id}
-                  className="rounded overflow-hidden shadow-lg wow fadeInRight"
-                >
-                  <div className="h-64 flex items-center justify-center bg-gray-100">
-                    <img
-                      className="w-full h-full object-cover"
-                      src={product.image}
-                      alt={product.name}
-                    />
-                  </div>
-                  <div className="px-6 py-4 bg-white flex flex-col flex-grow">
-                    <a
-                      href="#!"
-                      className="font-semibold text-lg text-black no-underline hover:text-indigo-600 transition"
-                    >
-                      {product.name}
-                    </a>
-                    <p className="text-gray-500 text-sm">
-                      {product.description}
-                    </p>
+            <div className="mt-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+                {products.map((product) => (
+                  <div
+                    key={product.id}
+                    className="rounded overflow-hidden shadow-lg wow fadeInRight relative" // Ensure 'relative' is here
+                  >
                     <button
-                      className="mt-auto w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition"
-                      onClick={() =>
-                        addedToCart[product.id]
-                          ? handleGoToCart()
-                          : handleAddToCart(product)
-                      }
+                      onClick={() => toggleFavorite(product.id)}
+                      className="absolute top-10 !right-2 text-gray-500 hover:text-red-500 transition border-none outline-none focus:ring-0 z-20" // Forced 'right-2' with ! and increased z-index
+                      style={{ right: "0.8rem", top: "0.5rem" }} // Inline style for debugging
                     >
-                      {addedToCart[product.id] ? "Go to Cart" : "Add to Cart"}
+                      <FontAwesomeIcon
+                        icon={faHeart}
+                        size="lg"
+                        className={favorites[product.id] ? "text-red-500" : ""}
+                      />
                     </button>
+
+                    <div className="h-64 flex items-center justify-center bg-gray-100">
+                      <img
+                        className="w-full h-full object-cover"
+                        src={product.image}
+                        alt={product.name}
+                      />
+                    </div>
+                    <div className="px-6 py-4 bg-white flex flex-col flex-grow">
+                      <div className="flex justify-between items-center">
+                        <a
+                          href="#!"
+                          className="font-semibold text-lg text-black no-underline hover:text-indigo-600 transition"
+                        >
+                          {product.name}
+                        </a>
+                      </div>
+                      <p className="text-gray-500 text-sm">
+                        {product.description}
+                      </p>
+                      <p className="text-1xl font-bold text-black">
+                        MRP: {product.price}
+                      </p>
+
+                      <button
+                        className="mt-auto w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition border-none outline-none focus:ring-0"
+                        onClick={() =>
+                          addedToCart[product.id]
+                            ? handleGoToCart()
+                            : handleAddToCart(product)
+                        }
+                      >
+                        {addedToCart[product.id] ? "Go to Cart" : "Add to Cart"}
+                      </button>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>

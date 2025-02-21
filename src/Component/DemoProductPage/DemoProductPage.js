@@ -13,7 +13,7 @@ const DemoProductPage = () => {
       description:
         "A baby product jar mockup is a digital or physical representation of a packaging design used for baby food, creams, or powders",
       videoUrl: "https://www.youtube.com/embed/Y_pETgQF1Ag?si=k8yJtWAWRhS-VS5G",
-    },
+    }, 
     {
       id: 2,
       name: "Submayur Oil",
