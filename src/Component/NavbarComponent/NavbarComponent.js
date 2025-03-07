@@ -129,7 +129,7 @@ const NavbarComponent = ({ activeLink, setActiveLink }) => {
               className={`nav-item nav-link d-flex align-items-center ${
                 activeLink === "Favorites" ? "active" : ""
               }`}
-              onClick={() => handleLinkClick("Favorites")}
+              onClick={() => handleLinkClick("FavoritesPage")}
             >
               {/* <i className="fas fa-heart me-2 fs-4"></i> */}
               <span>Favorites</span>

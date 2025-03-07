@@ -24,6 +24,7 @@ import CartPage from "./Component/CartComponent/CartComponent";
 import DemoProductPage from "./Component/DemoProductPage/DemoProductPage";
 import SliderBarFilter from "./Component/SliderBarFilterHomePage/SliderBarFilterHomePage";
 import "./App.css";
+import FavoritesPage from "./Component/FavoritePage/FavoritePage"
 
 function ProtectedRoutes() {
   return <Outlet />;
@@ -54,6 +55,7 @@ function App() {
             <Route path="About_Us" element={<AboutComponet />} />
             <Route path="SliderBarFilter" element={<SliderBarFilter />} />
             <Route path="DemoProductPage" element={<DemoProductPage />} />
+            <Route path="FavoritesPage" element={<FavoritesPage/>}/>
             <Route
               path="CartPage"
               element={
